@@ -1,0 +1,10 @@
+<%= @user.name %><p>さんとのチャット</p>
+<%= form_with model: @message do |f| %>
+    <%= f.text_field :message %>
+    <%= f.hidden_field :room_id %>
+    <%= f.submit %>
+<% end %>
+
+<% @messages.each do |message| %>
+    <%= message.message %>
+<% end %>
